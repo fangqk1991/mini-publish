@@ -17,6 +17,7 @@ module.exports = {
     '.DS_Store',
     '.idea',
     '.nyc_output'
+    '/node_modules/'
   ],
   exeBefore: [
     `echo "[Echo in local] Prepare files..."`,
@@ -37,8 +38,18 @@ module.exports = {
 }
 ```
 
+* `name`: project name
+* `sourceDir`: the path of project which will be upload to server
+* `ignores`: items will be exclude for rsync
+* `remote.host`: the remote server, such as fang@example.com
+* `remote.targetDir`: the remote directory for project
+
+You can see `lib/publish.tmpl` for more information.
+
 ## Usage
 ```
 mini-publish YOUR-CONFIG-FILE.js
 ```
 
+## Extras
+You can mini-publish in any project other than JavaScript.
