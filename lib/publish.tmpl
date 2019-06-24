@@ -37,7 +37,7 @@ if [ ! -d "${BIN}" ]; then
 fi
 rm -rf "${BIN}"/*
 
-rsync -av {{$excludeInfo}} "${sourceDir}" "${BIN}"
+rsync -av {{$excludeInfo}} "${sourceDir}/" "${BIN}"
 
 cd ${__DIR__}
 tmpFile="tmp.${projectName}.tgz"
