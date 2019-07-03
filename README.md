@@ -12,6 +12,9 @@ You should create a configuration file. Example:
 module.exports = {
   name: 'SomeProject',
   sourceDir: __dirname,
+  includes: [
+    '/some-dir/'
+  ],
   ignores: [
     '.git',
     '.DS_Store',
@@ -40,6 +43,7 @@ module.exports = {
 
 * `name`: project name
 * `sourceDir`: the path of project which will be upload to server
+* `includes`: items will be include for rsync, it takes higher priority then `ignores`
 * `ignores`: items will be exclude for rsync
 * `remote.host`: the remote server, such as fang@example.com
 * `remote.targetDir`: the remote directory for project

@@ -1,12 +1,12 @@
 module.exports = {
-  name: 'SomeProject',
+  name: 'SomeProject-Black',
   sourceDir: __dirname,
   ignores: [
     '.git',
     '.DS_Store',
     '.idea',
     '.nyc_output',
-    'config-demo.js'
+    '/exclude-dir/'
   ],
   exeBefore: [
     `echo "[Echo in local] Prepare files..."`,

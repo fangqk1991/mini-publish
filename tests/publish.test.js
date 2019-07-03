@@ -11,8 +11,12 @@ describe('Test HomeDir', () => {
 })
 
 describe('Test Publish', () => {
-  it(`Publish`, () => {
-    const project = new Project(`${__dirname}/config-demo.js`)
+  it(`Publish With Black List`, () => {
+    const project = new Project(`${__dirname}/config-demo-for-black.js`)
+    project.build()
+  })
+  it(`Publish With White List`, () => {
+    const project = new Project(`${__dirname}/config-demo-for-white.js`)
     project.build()
   })
 })
