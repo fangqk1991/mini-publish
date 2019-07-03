@@ -39,8 +39,6 @@ rm -rf "${BIN}"/*
 
 rsync -av {{$includeInfo}} {{$excludeInfo}} "${sourceDir}/" "${BIN}"
 
-echo "${BIN}"
-exit
 cd ${__DIR__}
 tmpFile="tmp.${projectName}.tgz"
 
