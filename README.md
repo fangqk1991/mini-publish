@@ -46,6 +46,7 @@ module.exports = {
 * `includes`: items will be include for rsync, it takes higher priority then `ignores`
 * `ignores`: items will be exclude for rsync
 * `remote.host`: the remote server, such as fang@example.com
+* `remote.port`: the remote server port, such as 22, default 22
 * `remote.targetDir`: the remote directory for project
 
 You can see `lib/publish.tmpl` for more information.
