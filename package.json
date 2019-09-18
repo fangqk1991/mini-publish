@@ -1,6 +1,6 @@
 {
   "name": "mini-publish",
-  "version": "0.3.1",
+  "version": "0.4.2",
   "description": "Mini publish system.",
   "main": "index.js",
   "scripts": {

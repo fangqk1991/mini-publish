@@ -14,6 +14,7 @@ projectName="{{$projectName}}"
 sourceDir="{{$sourceDir}}"
 remoteHost="{{$remoteHost}}"
 remotePath="{{$remotePath}}"
+remotePort="{{$remotePort}}"
 
 if [ -z "${projectName}" ]; then
     echo 'projectName error!'
@@ -44,9 +45,9 @@ tmpFile="tmp.${projectName}.tgz"
 
 tar -czf "${tmpFile}" -C ${BIN} .
 
-ssh ${remoteHost} "cd ~; {{$publishBefore}}"
-scp "${tmpFile}" "${remoteHost}:${remotePath}"
-ssh ${remoteHost} "cd ${remotePath}; tar --no-overwrite-dir -xzf ${tmpFile}; rm ${tmpFile}; {{$publishAfter}}"
+ssh ${remoteHost} -p ${remotePort} "cd ~; {{$publishBefore}}"
+scp -P ${remotePort} "${tmpFile}" "${remoteHost}:${remotePath}"
+ssh ${remoteHost} -p ${remotePort} "cd ${remotePath}; tar --no-overwrite-dir -xzf ${tmpFile}; rm ${tmpFile}; {{$publishAfter}}"
 
 rm "${tmpFile}"
 rm "$0"
