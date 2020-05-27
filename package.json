@@ -1,6 +1,6 @@
 {
   "name": "mini-publish",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Mini publish system.",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,6 @@
     "mini-publish": "./cli.js"
   },
   "dependencies": {
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.4"
   }
 }
